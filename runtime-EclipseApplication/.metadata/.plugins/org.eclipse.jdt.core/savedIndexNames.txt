@@ -1,4 +1,0 @@
-INDEX VERSION 1.131+/home/diogo/ASCT/runtime-EclipseApplication/.metadata/.plugins/org.eclipse.jdt.core
-4168597391.index
-2089348824.index
-1865797976.index
