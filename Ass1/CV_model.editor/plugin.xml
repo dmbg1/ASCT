@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?eclipse version="3.0"?>
+
+<!--
+-->
+
+<plugin>
+
+   <extension point="org.eclipse.ui.newWizards">
+      <!-- @generated cv_generator -->
+      <category
+            id="org.eclipse.emf.ecore.Wizard.category.ID"
+            name="%_UI_Wizard_category"/>
+      <wizard
+            id="curriculum_vitae.presentation.Curriculum_vitaeModelWizardID"
+            name="%_UI_Curriculum_vitaeModelWizard_label"
+            class="curriculum_vitae.presentation.Curriculum_vitaeModelWizard"
+            category="org.eclipse.emf.ecore.Wizard.category.ID"
+            icon="icons/full/obj16/Curriculum_vitaeModelFile.gif">
+         <description>%_UI_Curriculum_vitaeModelWizard_description</description>
+         <selection class="org.eclipse.core.resources.IResource"/>
+      </wizard>
+   </extension>
+
+   <extension point="org.eclipse.ui.editors">
+      <!-- @generated cv_generator -->
+      <editor
+            id="curriculum_vitae.presentation.Curriculum_vitaeEditorID"
+            name="%_UI_Curriculum_vitaeEditor_label"
+            icon="icons/full/obj16/Curriculum_vitaeModelFile.gif"
+            extensions="curriculum_vitae"
+            class="curriculum_vitae.presentation.Curriculum_vitaeEditor"
+            contributorClass="curriculum_vitae.presentation.Curriculum_vitaeActionBarContributor">
+      </editor>
+   </extension>
+
+</plugin>
