@@ -1,0 +1,10 @@
+[comment encoding = UTF-8 /]
+[module generate('https://curriculum_vitae')]
+
+
+[template public generateElement(aCurriculumVitae : CurriculumVitae)]
+[comment @main/]
+[file ('test.txt', false, 'UTF-8')]
+[aCurriculumVitae.Person.full_name/]
+[/file]
+[/template]
