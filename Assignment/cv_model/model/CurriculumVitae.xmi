@@ -23,5 +23,23 @@
         reading_qual="b1"
         writing_qual="C1"
         listening_qual="C2"/>
+    <technologies
+        name="Java"
+        proficiency="5"/>
+    <technologies
+        name="Python"
+        proficiency="5"/>
+    <technologies
+        name="C++"
+        proficiency="4"/>
+    <technologies
+        name="Javascript"
+        proficiency="4"/>
+    <technologies
+        name="C"
+        proficiency="3"/>
+    <technologies
+        name="Rust"
+        proficiency="2"/>
   </Person>
 </curriculum_vitae:CurriculumVitae>

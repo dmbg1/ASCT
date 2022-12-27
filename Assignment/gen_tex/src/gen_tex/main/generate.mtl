@@ -52,6 +52,51 @@ ItalicFont = Fontin-Italic.otf
 \textblockorigin{2mm}{0.65\paperheight}
 \setlength{\parindent}{0pt}
 
+\usepackage{tikz}
+\definecolor{frontColor}{rgb}{0.22,0.45,0.70}% light blue
+\definecolor{backColor}{RGB}{200,200,200}% grey
+\newcommand{\gradelong}['['/]6]{%
+    \pgfmathtruncatemacro\floored{#1}%
+    \pgfmathsetmacro\diff{#1-\floored}%
+    \newdimen\diffDim%
+    \diffDim = \diff pt%
+    \newdimen\numPointsDim
+    \numPointsDim = #1 pt
+    \newdimen\maxPointsDim%
+    \maxPointsDim = #2 pt%
+    \begin{tikzpicture}
+        \foreach \x in {1, ..., #2}{
+            \ifnum \x > \floored \relax%
+                \def\fillCol{#6}%
+            \else%
+                \def\fillCol{#5}%
+            \fi%
+            \fill['['/]\fillCol] (#3*\x, 0) circle (#4);
+        }%
+        \ifdim \diffDim > 0 pt \relax%
+            \ifdim \numPointsDim > \maxPointsDim \relax%
+            \else%
+                \pgfmathsetmacro\pos{#3*(\floored+1)}%
+                \begin{scope}['['/]xshift=\pos]
+                    \clip (-#4,-#4) rectangle ++(#4*2*\diff,#4*2);
+                    \fill['['/]#5] (0, 0) circle (#4);
+                \end{scope}
+            \fi%
+        \else%
+        \fi%
+    \end{tikzpicture}%
+}
+
+\newcommand{\grade}['['/]1]{%
+    \gradelong%
+    {#1}% grade as floating point value
+    {5}% max number of points
+    {9pt}% spacing between points
+    {3pt}% radius of point
+    {frontColor}% foreground color
+    {backColor}% background color
+}
+
 %--------------------BEGIN DOCUMENT----------------------
 \begin{document}
 
@@ -85,6 +130,15 @@ ItalicFont = Fontin-Italic.otf
 \begin{tabularx}{\textwidth}{c @{\extracolsep{\fill}} ccccc}
   & Speaking & Reading & Writing & Listening \\ \hline
 [genLanguages(aCurriculumVitae.Person.idioms)/]\end{tabularx}
+
+\section{Technologies}
+\begin{tabular}{r p{11cm}}
+        \grade{5}  & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 5))/]\\
+        \grade{4} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 4))/] \\
+        \grade{3} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 3))/]\\
+        \grade{2} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 2))/]\\
+        \grade{1} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 1))/]
+\end{tabular}
 \end{document}
 [/file]
 [/template]
@@ -128,5 +182,15 @@ ItalicFont = Fontin-Italic.otf
 \textsc{[language.lang/]} & [language.speaking_qual.toUpper()/] & [language.reading_qual.toUpper()/] & [language.writing_qual.toUpper()/] & [language.listening_qual.toUpper()/] \\
 [/if]
 [/for]
+[/template]
+
+[template public genEqProfTechs(technologies : OrderedSet(Technology))]
+[if (technologies->size() = 0)]
+-[else]
+[for (tech : Technology | technologies)]
+[if (technologies->last() = tech)]
+[tech.name/] [else]
+[tech.name + ', '/][/if][/for]
+[/if]
 [/template]
 
