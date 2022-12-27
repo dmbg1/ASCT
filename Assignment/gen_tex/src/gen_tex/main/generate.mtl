@@ -7,6 +7,7 @@
 \documentclass ['['/]a4paper,10pt]{article}
 
 %A Few Useful Packages
+\usepackage{tabularx}
 \usepackage{marvosym}
 \usepackage{fontspec} 					%for loading fonts
 \usepackage{xunicode,xltxtra,url,parskip} 	%other packages for formatting
@@ -79,6 +80,13 @@ ItalicFont = Fontin-Italic.otf
 \section{Summary}
 [aCurriculumVitae.Person.description/]
 \end{document}
+\section{Languages}
+\centering
+\begin{tabularx}{\textwidth}{c @{\extracolsep{\fill}} ccccc}
+  & Speaking & Reading & Writing & Listening \\ 
+ \textsc{English (Mother tongue)} & - & - & - & - \\
+\textsc{Portuguese}& B2 & B2 & B2 & B2 \\
+\end{tabularx}
 [/file]
 [/template]
 
