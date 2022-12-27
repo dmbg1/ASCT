@@ -125,10 +125,17 @@ ItalicFont = Fontin-Italic.otf
 \section{Summary}
 [aCurriculumVitae.Person.description/]
 
+%Section: Education
+\section{Education}
+\begin{tabular}{r p{11cm}}	
+\\
+[genDegrees(aCurriculumVitae.Person.degrees)/]
+\end{tabular}
+
 \section{Languages}
 \centering
 \begin{tabularx}{\textwidth}{c @{\extracolsep{\fill}} ccccc}
-  & Speaking & Reading & Writing & Listening \\ \hline
+  & Speaking & Reading & Writing & Listening \\
 [genLanguages(aCurriculumVitae.Person.idioms)/]\end{tabularx}
 
 \section{Technologies}
@@ -192,5 +199,13 @@ ItalicFont = Fontin-Italic.otf
 [tech.name/] [else]
 [tech.name + ', '/][/if][/for]
 [/if]
+[/template]
+
+[template public genDegrees(degrees : OrderedSet(Degree))]
+[for (degree : Degree | degrees)]
+\textsc{[degree.start.toString().tokenize()->last()/]-[degree.end.toString().tokenize()->last()/]} & [degree.degree_name/] \\ & \textbf{[degree.institution/]}\\
+[if (degree <> degrees->last())]
+\\[/if]
+[/for]
 [/template]
 
