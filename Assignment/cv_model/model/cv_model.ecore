@@ -59,6 +59,8 @@
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="reading_qual" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="writing_qual" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="listening_qual" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>
+    <eStructuralFeatures xsi:type="ecore:EAttribute" name="native_lang" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EBoolean"
+        defaultValueLiteral="false"/>
   </eClassifiers>
   <eClassifiers xsi:type="ecore:EClass" name="Degree">
     <eStructuralFeatures xsi:type="ecore:EAttribute" name="institution" eType="ecore:EDataType http://www.eclipse.org/emf/2002/Ecore#//EString"/>

@@ -79,14 +79,13 @@ ItalicFont = Fontin-Italic.otf
 
 \section{Summary}
 [aCurriculumVitae.Person.description/]
-\end{document}
+
 \section{Languages}
 \centering
 \begin{tabularx}{\textwidth}{c @{\extracolsep{\fill}} ccccc}
-  & Speaking & Reading & Writing & Listening \\ 
- \textsc{English (Mother tongue)} & - & - & - & - \\
-\textsc{Portuguese}& B2 & B2 & B2 & B2 \\
-\end{tabularx}
+  & Speaking & Reading & Writing & Listening \\ \hline
+[genLanguages(aCurriculumVitae.Person.idioms)/]\end{tabularx}
+\end{document}
 [/file]
 [/template]
 
@@ -120,3 +119,14 @@ ItalicFont = Fontin-Italic.otf
 [for (cName : CitationName | citationNames)]
 ['& ' + cName.name + ' \\\\ '/][/for]
 [/template]
+
+[template public genLanguages(languages : OrderedSet(Idiom))]
+[for (language : Idiom | languages)]
+[if (language.native_lang)]
+\textsc{[language.lang/] (Mother tongue)} & - & - & - & - \\
+[else]
+\textsc{[language.lang/]} & [language.speaking_qual.toUpper()/] & [language.reading_qual.toUpper()/] & [language.writing_qual.toUpper()/] & [language.listening_qual.toUpper()/] \\
+[/if]
+[/for]
+[/template]
+

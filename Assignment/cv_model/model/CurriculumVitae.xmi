@@ -14,5 +14,14 @@
         name="Cooke, David"/>
     <citation_names
         name="Cooke, D. J"/>
+    <idioms
+        lang="English"
+        native_lang="true"/>
+    <idioms
+        lang="Portuguese"
+        speaking_qual="B2"
+        reading_qual="b1"
+        writing_qual="C1"
+        listening_qual="C2"/>
   </Person>
 </curriculum_vitae:CurriculumVitae>
