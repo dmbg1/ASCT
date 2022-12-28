@@ -38,6 +38,74 @@
         degree_name="Honours Bachelor of Science Degree (Bachelor)"
         start="1971-01-01T00:00:00.000+0100"
         end="1974-01-01T00:00:00.000+0100"/>
+    <affiliation_categories
+        field="Science">
+      <affiliations
+          role="Researcher (Research)"
+          employer="University of Cambridge Institute of Criminology, United Kingdom"
+          start="1986-01-01T00:00:00.000+0000"
+          end="1986-01-01T00:00:00.000+0000"/>
+    </affiliation_categories>
+    <affiliation_categories
+        field="Teaching in Higher Education">
+      <affiliations
+          role="Assistant Professor (University Teacher)"
+          employer="La Trobe University School of Law, Australia"
+          start="2015-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Assistant Professor (University Teacher)"
+          employer="University of Bergen - Department of Psychology, Norway"
+          start="2006-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Full Professor (University Teacher)"
+          employer="Glasgow Caledonian University, United Kingdom"
+          start="1992-01-01T00:00:00.000+0000"
+          end="2016-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Visiting Professor (University Teacher)"
+          employer="University of Glasgow Mental Health and Wellbeing, United Kingdom"
+          start="1997-01-01T00:00:00.000+0000"
+          end="2001-01-01T00:00:00.000+0000"/>
+    </affiliation_categories>
+    <affiliation_categories
+        field="Positions / Appointments">
+      <affiliations
+          role="Grade B Clinical Psychologist with maximum discretionary points for personal excellence"
+          employer="Douglas Inch Centre, United Kingdom"
+          start="1990-01-01T00:00:00.000+0000"
+          end="2007-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Top Grade Clinical Psychologist (with greater responsibility)"
+          employer="Douglas Inch Centre, United Kingdom"
+          start="1989-01-01T00:00:00.000+0000"
+          end="1990-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Top Grade Clinical Psychologist"
+          employer="Douglas Inch Centre, United Kingdom"
+          start="1984-01-01T00:00:00.000+0000"
+          end="1989-01-01T00:00:00.000+0000"
+          host_institution=""/>
+      <affiliations
+          role="Chartered Psychologist"
+          employer="The British Psychological Society, United Kingdom"
+          start="1988-01-01T00:00:00.000+0000"
+          end="1988-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Senior Clinical Psychologist"
+          employer="Gartnavel Royal Hospital, United Kingdom"
+          start="1978-01-01T00:00:00.000+0000"
+          end="1983-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Basic Grade Clinical Psychologist (Post Probationer)"
+          employer="Gartnavel Royal Hospital, United Kingdom"
+          start="1976-01-01T00:00:00.000+0100"
+          end="1978-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Basic Grade Clinical Psychologist (Probationer)"
+          employer="Northumberland Area Health Authority, United Kingdom"
+          start="1974-01-01T00:00:00.000+0100"
+          end="1976-01-01T00:00:00.000+0100"/>
+    </affiliation_categories>
     <technologies
         name="Java"
         proficiency="5"/>
