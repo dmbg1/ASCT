@@ -14,6 +14,8 @@
         name="Cooke, David"/>
     <citation_names
         name="Cooke, D. J"/>
+    <websites
+        url="www.test.com/David_Cooke"/>
     <idioms
         lang="English"
         native_lang="true"/>
@@ -27,7 +29,11 @@
         institution="University of Glasgow, Reino Unido"
         degree_name="Doctor of Philosophy (Doctor of Philosophy)"
         start="1978-01-01T00:00:00.000+0000"
-        end="1983-01-01T00:00:00.000+0000"/>
+        end="1983-01-01T00:00:00.000+0000">
+      <projects
+          name="Institutional Violence"
+          description="The Development of an Empirically Informed Risk Assessment Guide"/>
+    </degrees>
     <degrees
         institution="The University of Newcastle, Austrália"
         degree_name="Master of Science Degree (Master), Specialization in Clinical Psychology "
@@ -38,6 +44,12 @@
         degree_name="Honours Bachelor of Science Degree (Bachelor)"
         start="1971-01-01T00:00:00.000+0100"
         end="1974-01-01T00:00:00.000+0100"/>
+    <projects
+        name="The Comprehensive Assessment of Psychopathic Personality Disorder (CAPP)"
+        description="The development of a new measure of psychopathy and an assessment of its cross-cultural generalisability in Scotland"/>
+    <projects
+        name="The Diagnostic Significance of Antisocial Behaviour"
+        description="Nature of Psychopathic Personality Disorder"/>
     <affiliation_categories
         field="Science">
       <affiliations
@@ -106,6 +118,30 @@
           start="1974-01-01T00:00:00.000+0100"
           end="1976-01-01T00:00:00.000+0100"/>
     </affiliation_categories>
+    <distinction_types
+        type="Award">
+      <distinctions
+          name="Lifetime Achievement Award European Association of Psychology and Law"
+          date="2018-01-01T00:00:00.000+0000"/>
+      <distinctions
+          name="The Medal of David the Invincible of The Armenian Philosophical Academy"
+          date="2012-01-01T00:00:00.000+0000"/>
+      <distinctions
+          name="&#x9;Senior Award for Outstanding Lifetime Contribution to Forensic Psychology from the Division of Forensic Psychology"
+          date="2006-01-01T00:00:00.000+0000"/>
+    </distinction_types>
+    <distinction_types
+        type="Other Distinction">
+      <distinctions
+          name="Honorary Doctorate (Armenian State Pedagogical University After Khachatur Abovian, Armenia)"
+          date="2012-01-01T00:00:00.000+0000"/>
+      <distinctions
+          name="Fellow of the Royal Society of Edinburgh (Royal Society of Edinburgh, United Kingdom)"
+          date="2004-01-01T00:00:00.000+0000"/>
+      <distinctions
+          name="Fellow of British Psychological Society (The British Psychological Society, United Kingdom)"
+          date="1986-01-01T00:00:00.000+0000"/>
+    </distinction_types>
     <technologies
         name="Java"
         proficiency="5"/>
@@ -124,5 +160,23 @@
     <technologies
         name="Rust"
         proficiency="2"/>
+    <activity_types
+        type="Jury of Academic Degree">
+      <activities
+          role="(Thesis) Arguer"
+          description="Revealing specialisation events induced by pollutants in below ground fungal communities in 2020"/>
+      <activities
+          role="(Thesis) Main arguer"
+          description="Taxonomy and biodiversity of plant pathogenic fungi from Australia"/>
+    </activity_types>
+    <activity_types
+        type="Committee Member">
+      <activities
+          role="Advisor / Consultant"
+          description="Scientific Consultant"/>
+      <activities
+          role="President / Vice-president"
+          description="President of the Mediterranean Phytopathology Union"/>
+    </activity_types>
   </Person>
 </curriculum_vitae:CurriculumVitae>
