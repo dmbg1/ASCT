@@ -105,13 +105,13 @@ ItalicFont = Fontin-Italic.otf
 \font\fb=''['['/]cmr10]'' %for use with \LaTeX command
 
 %--------------------TITLE-------------
+[if (aCurriculumVitae.Person <> null)]
 \par{\centering
 		{\Huge   \textsc{[if (aCurriculumVitae.Person.full_name <> null)][firstAndLastName(aCurriculumVitae.Person.full_name.tokenize())/] [else]firstName lastName[/if]}
 	}\bigskip\par}
 
 %--------------------SECTIONS-----------------------------------
 %Section: Personal Data
-
 \section{Personal Information}
 
 \begin{tabular}{rl}
@@ -158,6 +158,10 @@ ItalicFont = Fontin-Italic.otf
         \grade{5}  & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 5))/]\\
 \end{tabular}
 [/if]
+[else]
+\par{\centering
+		{\Huge   \textsc{firstName lastName}
+	}\bigskip\par}[/if]
 \end{document}
 [/file]
 [/template]
