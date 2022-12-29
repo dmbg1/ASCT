@@ -29,8 +29,8 @@
         eType="#//Degree" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="projects" upperBound="-1"
         eType="#//Project" containment="true"/>
-    <eStructuralFeatures xsi:type="ecore:EReference" name="affiliation_categories"
-        upperBound="-1" eType="#//AffiliationField" containment="true"/>
+    <eStructuralFeatures xsi:type="ecore:EReference" name="affiliation_fields" upperBound="-1"
+        eType="#//AffiliationField" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="distinction_types" upperBound="-1"
         eType="#//DistinctionType" containment="true"/>
     <eStructuralFeatures xsi:type="ecore:EReference" name="technologies" upperBound="-1"

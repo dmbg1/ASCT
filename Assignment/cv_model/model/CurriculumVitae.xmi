@@ -50,15 +50,15 @@
     <projects
         name="The Diagnostic Significance of Antisocial Behaviour"
         description="Nature of Psychopathic Personality Disorder"/>
-    <affiliation_categories
+    <affiliation_fields
         field="Science">
       <affiliations
           role="Researcher (Research)"
           employer="University of Cambridge Institute of Criminology, United Kingdom"
           start="1986-01-01T00:00:00.000+0000"
           end="1986-01-01T00:00:00.000+0000"/>
-    </affiliation_categories>
-    <affiliation_categories
+    </affiliation_fields>
+    <affiliation_fields
         field="Teaching in Higher Education">
       <affiliations
           role="Assistant Professor (University Teacher)"
@@ -78,8 +78,8 @@
           employer="University of Glasgow Mental Health and Wellbeing, United Kingdom"
           start="1997-01-01T00:00:00.000+0000"
           end="2001-01-01T00:00:00.000+0000"/>
-    </affiliation_categories>
-    <affiliation_categories
+    </affiliation_fields>
+    <affiliation_fields
         field="Positions / Appointments">
       <affiliations
           role="Grade B Clinical Psychologist with maximum discretionary points for personal excellence"
@@ -117,7 +117,7 @@
           employer="Northumberland Area Health Authority, United Kingdom"
           start="1974-01-01T00:00:00.000+0100"
           end="1976-01-01T00:00:00.000+0100"/>
-    </affiliation_categories>
+    </affiliation_fields>
     <distinction_types
         type="Award">
       <distinctions

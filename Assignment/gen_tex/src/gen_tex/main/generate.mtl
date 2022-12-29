@@ -53,7 +53,7 @@ ItalicFont = Fontin-Italic.otf
 \setlength{\parindent}{0pt}
 
 \usepackage{tikz}
-\definecolor{frontColor}{rgb}{0.22,0.45,0.70}% light blue
+\definecolor{frontColor}{rgb}{0.2,0.2,0.2}% dark grey
 \definecolor{backColor}{RGB}{200,200,200}% grey
 \newcommand{\gradelong}['['/]6]{%
     \pgfmathtruncatemacro\floored{#1}%
@@ -129,22 +129,26 @@ ItalicFont = Fontin-Italic.otf
 \section{Education}
 \begin{tabular}{r p{11cm}}	
 \\
-[genDegrees(aCurriculumVitae.Person.degrees)/]
+[genDegrees(aCurriculumVitae.Person.degrees)/]\\
 \end{tabular}
 
+\section{Work Experience}
+[genAffiliations(aCurriculumVitae.Person.affiliation_fields)/]
 \section{Languages}
 \centering
 \begin{tabularx}{\textwidth}{c @{\extracolsep{\fill}} ccccc}
-  & Speaking & Reading & Writing & Listening \\
-[genLanguages(aCurriculumVitae.Person.idioms)/]\end{tabularx}
+\\
+  & \textbf{Speaking} & \textbf{Reading} & \textbf{Writing} & \textbf{Listening} \\
+[genLanguages(aCurriculumVitae.Person.idioms)/]\\\end{tabularx}
 
 \section{Technologies}
 \begin{tabular}{r p{11cm}}
+\\
         \grade{5}  & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 5))/]\\
         \grade{4} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 4))/] \\
         \grade{3} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 3))/]\\
         \grade{2} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 2))/]\\
-        \grade{1} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 1))/]
+        \grade{1} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 1))/]\\
 \end{tabular}
 \end{document}
 [/file]
@@ -206,6 +210,27 @@ ItalicFont = Fontin-Italic.otf
 \textsc{[degree.start.toString().tokenize()->last()/]-[degree.end.toString().tokenize()->last()/]} & [degree.degree_name/] \\ & \textbf{[degree.institution/]}\\
 [if (degree <> degrees->last())]
 \\[/if]
+[/for]
+[/template]
+
+[template public genAffiliations(affil_fields : OrderedSet(AffiliationField))]
+[for (affil_field : AffiliationField | affil_fields)]
+[if (affil_field.affiliations->size() > 0)]
+\begin{tabular}{r}
+[if (affil_field = affil_fields->first())]\\[/if]\large
+\textbf{[affil_field.field/]}
+\normalsize
+\end{tabular}
+
+\begin{tabular}{r|p{11cm}} 
+[for (affil : Affiliation | affil_field.affiliations)]
+\textsc{[affil.start.toString().tokenize()->last()/]-[if (affil.end->size()= 0)]Current[else][affil.end.toString().tokenize()->last()/][/if]} 
+& \textsc{[affil.employer/]} \\ \textsc{} & \emph{[affil.role/]} [if (affil.description <> null)]
+  \\ & \footnotesize{[affil.description/]}[/if] \\ \multicolumn{2}{c}{} \\
+[/for]
+\end{tabular}
+
+[/if]
 [/for]
 [/template]
 
