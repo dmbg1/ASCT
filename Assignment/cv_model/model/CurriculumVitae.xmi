@@ -15,7 +15,9 @@
     <citation_names
         name="Cooke, D. J"/>
     <websites
-        url="www.test.com/David_Cooke"/>
+        url="www.linkedin.com/mock__1"/>
+    <websites
+        url="www.twitter.com/mock__1"/>
     <idioms
         lang="English"
         native_lang="true"/>
@@ -32,7 +34,7 @@
         end="1983-01-01T00:00:00.000+0000">
       <projects
           name="Institutional Violence"
-          description="The Development of an Empirically Informed Risk Assessment Guide"/>
+          description="The Development of an Empirically Informed Risk Assessment Guide."/>
     </degrees>
     <degrees
         institution="The University of Newcastle, Austrália"
@@ -46,10 +48,10 @@
         end="1974-01-01T00:00:00.000+0100"/>
     <projects
         name="The Comprehensive Assessment of Psychopathic Personality Disorder (CAPP)"
-        description="The development of a new measure of psychopathy and an assessment of its cross-cultural generalisability in Scotland"/>
+        description="The development of a new measure of psychopathy and an assessment of its cross-cultural generalisability in Scotland."/>
     <projects
         name="The Diagnostic Significance of Antisocial Behaviour"
-        description="Nature of Psychopathic Personality Disorder"/>
+        description="Nature of Psychopathic Personality Disorder."/>
     <affiliation_fields
         field="Science">
       <affiliations
@@ -163,20 +165,27 @@
     <activity_types
         type="Jury of Academic Degree">
       <activities
-          role="(Thesis) Arguer"
+          name="(Thesis) Arguer"
           description="Revealing specialisation events induced by pollutants in below ground fungal communities in 2020"/>
       <activities
-          role="(Thesis) Main arguer"
+          name="(Thesis) Main arguer"
           description="Taxonomy and biodiversity of plant pathogenic fungi from Australia"/>
     </activity_types>
     <activity_types
         type="Committee Member">
       <activities
-          role="Advisor / Consultant"
+          name="Advisor / Consultant"
           description="Scientific Consultant"/>
       <activities
-          role="President / Vice-president"
+          name="President / Vice-president"
           description="President of the Mediterranean Phytopathology Union"/>
+    </activity_types>
+    <activity_types
+        type="Interests">
+      <activities
+          name="Soccer"/>
+      <activities
+          name="Video Games"/>
     </activity_types>
   </Person>
 </curriculum_vitae:CurriculumVitae>
