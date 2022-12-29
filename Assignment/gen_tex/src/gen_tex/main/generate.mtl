@@ -106,7 +106,7 @@ ItalicFont = Fontin-Italic.otf
 
 %--------------------TITLE-------------
 \par{\centering
-		{\Huge   \textsc{[firstAndLastName(aCurriculumVitae.Person.full_name.tokenize())/]}
+		{\Huge   \textsc{[if (aCurriculumVitae.Person.full_name <> null)][firstAndLastName(aCurriculumVitae.Person.full_name.tokenize())/] [else]firstName lastName[/if]}
 	}\bigskip\par}
 
 %--------------------SECTIONS-----------------------------------
@@ -118,29 +118,36 @@ ItalicFont = Fontin-Italic.otf
     \textsc{Full Name:} & [aCurriculumVitae.Person.full_name/] \\
     \textsc{Date of birth:} & [parseDate(aCurriculumVitae.Person.date_of_birth.toString().tokenize())/] \\
     \textsc{Adrress:}   & [aCurriculumVitae.Person.home_address/]\\
-    \textsc{Citation Names:}   [genCitNames(aCurriculumVitae.Person.citation_names)/]
+    \textsc{Citation Names:}   [genCitNames(aCurriculumVitae.Person.citation_names)/]\\
     \textsc{Mobile:}     & [aCurriculumVitae.Person.phone_number/]\\
 \end{tabular}
 
+[if (aCurriculumVitae.Person.description <> null)]
 \section{Summary}
-[aCurriculumVitae.Person.description/]
+[aCurriculumVitae.Person.description/][/if]
 
+[if (aCurriculumVitae.Person.degrees->size() > 0)]
 %Section: Education
 \section{Education}
 \begin{tabular}{r p{11cm}}	
 \\
 [genDegrees(aCurriculumVitae.Person.degrees)/]\\
-\end{tabular}
+\end{tabular}[/if]
 
+[if (aCurriculumVitae.Person.affiliation_fields->size() > 0)]
 \section{Work Experience}
-[genAffiliations(aCurriculumVitae.Person.affiliation_fields)/]
+[genAffiliations(aCurriculumVitae.Person.affiliation_fields)/][/if]
+
+
+[if (aCurriculumVitae.Person.idioms->size() > 0)]
 \section{Languages}
 \centering
 \begin{tabularx}{\textwidth}{c @{\extracolsep{\fill}} ccccc}
 \\
   & \textbf{Speaking} & \textbf{Reading} & \textbf{Writing} & \textbf{Listening} \\
-[genLanguages(aCurriculumVitae.Person.idioms)/]\\\end{tabularx}
+[genLanguages(aCurriculumVitae.Person.idioms)/]\\\end{tabularx}[/if]
 
+[if (aCurriculumVitae.Person.technologies->size() > 0)]
 \section{Technologies}
 \begin{tabular}{r p{11cm}}
 \\
@@ -150,6 +157,7 @@ ItalicFont = Fontin-Italic.otf
         \grade{4} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 4))/] \\
         \grade{5}  & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 5))/]\\
 \end{tabular}
+[/if]
 \end{document}
 [/file]
 [/template]
@@ -182,7 +190,7 @@ ItalicFont = Fontin-Italic.otf
 
 [template public genCitNames(citationNames : OrderedSet(CitationName))]
 [for (cName : CitationName | citationNames)]
-['& ' + cName.name + ' \\\\ '/][/for]
+['& ' + cName.name/][if (cName <> citationNames->last())] \\ [/if][/for]
 [/template]
 
 [template public genLanguages(languages : OrderedSet(Idiom))]
