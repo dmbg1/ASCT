@@ -144,11 +144,11 @@ ItalicFont = Fontin-Italic.otf
 \section{Technologies}
 \begin{tabular}{r p{11cm}}
 \\
-        \grade{5}  & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 5))/]\\
-        \grade{4} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 4))/] \\
-        \grade{3} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 3))/]\\
-        \grade{2} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 2))/]\\
         \grade{1} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 1))/]\\
+        \grade{2} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 2))/]\\
+        \grade{3} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 3))/]\\
+        \grade{4} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 4))/] \\
+        \grade{5}  & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 5))/]\\
 \end{tabular}
 \end{document}
 [/file]
