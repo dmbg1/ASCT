@@ -3,7 +3,7 @@
 
 [template public generateElement(aCurriculumVitae : CurriculumVitae)]
 [comment @main/]
-[file ('test.tex', false, 'UTF-8')]
+[file ('cv.tex', false, 'UTF-8')]
 \documentclass ['['/]a4paper,10pt]{article}
 
 %A Few Useful Packages
