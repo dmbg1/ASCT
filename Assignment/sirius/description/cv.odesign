@@ -4,7 +4,7 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Curriculum_Vitae" domainClass="curriculum_vitae::CurriculumVitae" enablePopupBars="true">
       <metamodel href="../../cv_model/model/cv_model.ecore#/"/>
       <defaultLayer name="Default">
-        <edgeMappings name="PersonToCitation" sourceMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='PersonContainer']" targetMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='CitationContainer']">
+        <edgeMappings name="PersonToCitation" sourceMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='PersonContainer']" targetMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='CitationContainer']" targetFinderExpression="var:self">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -580,7 +580,7 @@
                     <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
                   </style>
                 </subNodeMappings>
-                <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:role" labelAlignment="LEFT">
+                <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelAlignment="LEFT">
                   <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
                   <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
