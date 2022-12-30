@@ -41,6 +41,8 @@ The design file is called cv.odesign and is located in sirius/description/cv.ode
 
 The image [Graphical to metamodel](/Assignment/docs/cgsMapping.png) indicates with a number the connection between the metamodel and the tables of the graphical syntax.
 
+### Concrete Graphical Syntax Example
+
 ![Concrete Graphical Syntax Example](/Assignment/docs/Curriculum_Vitae_graph_syntax.png)
 
 ## Acceleo (Code Generation)
