@@ -19,7 +19,7 @@
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv_model.ecore#//Person/idioms"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv_model.ecore#//Person/degrees"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv_model.ecore#//Person/projects"/>
-      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv_model.ecore#//Person/affiliation_categories"/>
+      <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv_model.ecore#//Person/affiliation_fields"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv_model.ecore#//Person/distinction_types"/>
       <genFeatures property="None" children="true" createChild="true" ecoreFeature="ecore:EReference cv_model.ecore#//Person/technologies"/>
       <genFeatures notify="false" createChild="false" propertySortChoices="true" ecoreFeature="ecore:EReference cv_model.ecore#//Person/activity_types"/>
@@ -36,6 +36,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//Idiom/reading_qual"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//Idiom/writing_qual"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//Idiom/listening_qual"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//Idiom/native_lang"/>
     </genClasses>
     <genClasses ecoreClass="cv_model.ecore#//Degree">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//Degree/institution"/>
@@ -53,7 +54,7 @@
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//Affiliation/employer"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//Affiliation/start"/>
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//Affiliation/end"/>
-      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//Affiliation/host_institution"/>
+      <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//Affiliation/description"/>
     </genClasses>
     <genClasses ecoreClass="cv_model.ecore#//AffiliationField">
       <genFeatures createChild="false" ecoreFeature="ecore:EAttribute cv_model.ecore#//AffiliationField/field"/>
