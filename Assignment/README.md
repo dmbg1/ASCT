@@ -27,3 +27,32 @@ For the second phase of the project slight changes were done, such as the remova
 The previously described changes are reflected in the following metamodel diagram ([Second Metamodel diagram link](/Assignment/docs/MetamodelSecond.png)):
 
 ![Second Metamodel diagram](/Assignment/docs/MetamodelSecond.png)
+
+## Sirius
+
+### How to see graphical syntax
+
+1. Open CurriculumVitae.aird located in cv_model/model/CurriculumVItae.aird. 
+2. Double click Curriculum_Vitae in Representations and choose the .xmi file.
+
+The design file is called cv.odesign and is located in sirius/description/cv.odesign.
+
+### Graphical to metamodal elements
+
+The image [Graphical to metamodel](/Assignment/docs/cgsMapping.png) indicates with a number the connection between the metamodel and the tables of the graphical syntax.
+
+![Concrete Graphical Syntax Example](/Assignment/docs/Curriculum_Vitae_graph_syntax.png)
+
+## Acceleo (Code Generation)
+
+### How to generate the latex file
+
+1. Go to **/gen_tex/src/gen_tex/**, right click generate.mtl and then find "Run As" and go to Run Configurations.
+
+2. Then input the configurations as shown in the image below: 
+
+    ![Run Configuration for acceleo](/Assignment/docs/accRunConfig.png)
+
+3. The underlined configuration represents the model in the .xmi format through which the code generation will be done. To generate another model its path needs to be input there.
+
+4. After running the code generator, the generated latex file and its dependencies will be found in the **/gen_tex/output** path.
