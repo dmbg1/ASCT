@@ -4,7 +4,7 @@
     <ownedRepresentations xsi:type="description_1:DiagramDescription" name="Curriculum_Vitae" domainClass="curriculum_vitae::CurriculumVitae" enablePopupBars="true">
       <metamodel href="../../cv_model/model/cv_model.ecore#/"/>
       <defaultLayer name="Default">
-        <edgeMappings name="PersonToCitation" sourceMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='PersonContainer']" targetMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='CitationContainer']" targetFinderExpression="var:self">
+        <edgeMappings name="PersonToCitation" sourceMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='PersonContainer']" targetMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='CitationContainer']">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -77,6 +77,14 @@
           </style>
         </edgeMappings>
         <edgeMappings name="PersonToProject" sourceMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='PersonContainer']" targetMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='ProjectContainer']" targetFinderExpression="var:self">
+          <style sizeComputationExpression="2">
+            <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+            <centerLabelStyleDescription labelSize="12">
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            </centerLabelStyleDescription>
+          </style>
+        </edgeMappings>
+        <edgeMappings name="PersonToActivity" sourceMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='PersonContainer']" targetMapping="//@ownedViewpoints[name='cv']/@ownedRepresentations[name='Curriculum_Vitae']/@defaultLayer/@containerMappings[name='ActivitiesContainer']" targetFinderExpression="var:self">
           <style sizeComputationExpression="2">
             <strokeColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
             <centerLabelStyleDescription labelSize="12">
@@ -551,6 +559,56 @@
             <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
             <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_red']"/>
             <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+          </style>
+        </containerMappings>
+        <containerMappings name="ActivitiesContainer" domainClass="curriculum_vitae::Person" childrenPresentation="HorizontalStack">
+          <subContainerMappings name="ActivityTypeContainer" domainClass="curriculum_vitae::Person" childrenPresentation="HorizontalStack">
+            <subContainerMappings name="TypeContainer" domainClass="curriculum_vitae::ActivityType" childrenPresentation="VerticalStack">
+              <subContainerMappings name="ActivityRoleNode" semanticCandidatesExpression="feature:activities" domainClass="curriculum_vitae::Activity" childrenPresentation="List">
+                <subNodeMappings name="ActivityDesText" semanticCandidatesExpression="var:self" domainClass="curriculum_vitae::Activity">
+                  <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="Description:" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelFormat>bold</labelFormat>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='gray']"/>
+                  </style>
+                </subNodeMappings>
+                <subNodeMappings name="ActivityDesNode" semanticCandidatesExpression="var:self" domainClass="curriculum_vitae::Activity">
+                  <style xsi:type="style:SquareDescription" labelSize="12" showIcon="false" labelExpression="feature:description" labelAlignment="LEFT" labelPosition="node" resizeKind="NSEW" width="10" height="5">
+                    <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                    <color xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='white']"/>
+                  </style>
+                </subNodeMappings>
+                <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" labelExpression="feature:role" labelAlignment="LEFT">
+                  <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                  <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+                  <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+                </style>
+              </subContainerMappings>
+              <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="feature:type">
+                <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <labelFormat>bold</labelFormat>
+                <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+                <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+                <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+              </style>
+            </subContainerMappings>
+            <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Type">
+              <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <labelFormat>bold</labelFormat>
+              <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+              <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+              <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
+            </style>
+          </subContainerMappings>
+          <style xsi:type="style:FlatContainerStyleDescription" borderSizeComputationExpression="1" labelSize="12" showIcon="false" labelExpression="Activities">
+            <borderColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <labelFormat>bold</labelFormat>
+            <labelColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='black']"/>
+            <backgroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='light_gray']"/>
+            <foregroundColor xsi:type="description:SystemColor" href="environment:/viewpoint#//@systemColors/@entries[name='purple']"/>
           </style>
         </containerMappings>
       </defaultLayer>
