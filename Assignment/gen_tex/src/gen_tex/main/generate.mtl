@@ -284,7 +284,7 @@ ItalicFont = Fontin-Italic.otf
 [for (degree_project: Project | degree_projects)]
 \large \textbf{\emph{[degree_project.name/] *}}\normalsize\\\\
 \emph{[degree_project.description/]}\\
-\footnotesize{* Project developed for degree: [degree_project.eContainer(Degree).degree_name + ', ' + degree_project.eContainer(Degree).institution/]}\\\\
+\footnotesize{* Project developed for degree: [degree_project.eContainer(Degree).degree_name /] [if (degree_project.eContainer(Degree).institution <> null)], [degree_project.eContainer(Degree).institution/][/if]}\\\\
 [/for]
 
 [for (other_project: Project | other_projects)]
