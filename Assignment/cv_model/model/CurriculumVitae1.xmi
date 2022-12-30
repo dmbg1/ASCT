@@ -4,4 +4,6 @@
     xmlns:xmi="http://www.omg.org/XMI"
     xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xmlns:curriculum_vitae="https://curriculum_vitae"
-    xsi:schemaLocation="https://curriculum_vitae cv_model.ecore"/>
+    xsi:schemaLocation="https://curriculum_vitae cv_model.ecore">
+  <Person/>
+</curriculum_vitae:CurriculumVitae>
