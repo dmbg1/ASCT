@@ -58,3 +58,7 @@ The image [Graphical to metamodel](/Assignment/docs/cgsMapping.png) indicates wi
 3. The underlined configuration represents the model in the .xmi format through which the code generation will be done. To generate another model its path needs to be input there.
 
 4. After running the code generator, the generated latex file and its dependencies will be found in the **/gen_tex/output** path.
+
+### Generated CV document example 
+
+[Example CV](/Assignment/docs/Gen_CV_Example.pdf)
