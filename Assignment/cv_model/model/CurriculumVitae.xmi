@@ -1,59 +1,191 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<curriculum_vitae:CurriculumVitae xmi:version="2.0" xmlns:xmi="http://www.omg.org/XMI" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:curriculum_vitae="https://curriculum_vitae" xsi:schemaLocation="https://curriculum_vitae cv_model.ecore">
-  <Person full_name="David John Cooke" date_of_birth="1953-09-18T01:00:00.000+0100" phone_number="5526868523" home_address="44 Carpenter St.&#xA;    Olympia, WA 98512" description="I am a Chartered Forensic and Chartered Clinical Psychologist. As a practicing forensic clinical psychologist my research has always had an applied as well as a theoretical orientation. I have specialised in three broad areas, the nature of psychopathic personality disorder, the impact of institutional factors on the level of violence in forensic settings and prisons, and finally, the theoretical challenges of carrying out valid violence risk assessments of individuals. ">
-    <citation_names name="Cooke, David"/>
-    <citation_names name="Cooke, D. J"/>
-    <websites url="www.test.com/David_Cooke"/>
-    <idioms lang="English" native_lang="true"/>
-    <idioms lang="Portuguese" speaking_qual="B2" reading_qual="5" writing_qual="C1" listening_qual="C2"/>
-    <degrees institution="University of Glasgow, Reino Unido" degree_name="Doctor of Philosophy (Doctor of Philosophy)" start="1978-01-01T00:00:00.000+0000" end="1983-01-01T00:00:00.000+0000">
-      <projects name="Institutional Violence" description="The Development of an Empirically Informed Risk Assessment Guide"/>
+<curriculum_vitae:CurriculumVitae
+    xmi:version="2.0"
+    xmlns:xmi="http://www.omg.org/XMI"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:curriculum_vitae="https://curriculum_vitae"
+    xsi:schemaLocation="https://curriculum_vitae cv_model.ecore">
+  <Person full_name="David John Cooke"
+      date_of_birth="1953-09-18T01:00:00.000+0100"
+      phone_number="5526868523"
+      home_address="44 Carpenter St.&#xA;    Olympia, WA 98512"
+      description="I am a Chartered Forensic and Chartered Clinical Psychologist. As a practicing forensic clinical psychologist my research has always had an applied as well as a theoretical orientation. I have specialised in three broad areas, the nature of psychopathic personality disorder, the impact of institutional factors on the level of violence in forensic settings and prisons, and finally, the theoretical challenges of carrying out valid violence risk assessments of individuals. ">
+    <citation_names
+        name="Cooke, David"/>
+    <citation_names
+        name="Cooke, D. J"/>
+    <websites
+        url="www.linkedin.com/mock__1"/>
+    <websites
+        url="www.twitter.com/mock__1"/>
+    <idioms
+        lang="English"
+        native_lang="true"/>
+    <idioms
+        lang="Portuguese"
+        speaking_qual="B2"
+        reading_qual="b1"
+        writing_qual="C1"
+        listening_qual="C2"/>
+    <degrees
+        institution="University of Glasgow, Reino Unido"
+        degree_name="Doctor of Philosophy (Doctor of Philosophy)"
+        start="1978-01-01T00:00:00.000+0000"
+        end="1983-01-01T00:00:00.000+0000">
+      <projects
+          name="Institutional Violence"
+          description="The Development of an Empirically Informed Risk Assessment Guide."/>
     </degrees>
-    <degrees institution="The University of Newcastle, Austrália" degree_name="Master of Science Degree (Master), Specialization in Clinical Psychology " start="1974-01-01T00:00:00.000+0100" end="1976-01-01T00:00:00.000+0100"/>
-    <degrees institution="University of St Andrews, Reino Unido" degree_name="Honours Bachelor of Science Degree (Bachelor)" start="1971-01-01T00:00:00.000+0100" end="1974-01-01T00:00:00.000+0100"/>
-    <projects name="The Comprehensive Assessment of Psychopathic Personality Disorder (CAPP)" description="The development of a new measure of psychopathy and an assessment of its cross-cultural generalisability in Scotland"/>
-    <projects name="The Diagnostic Significance of Antisocial Behaviour" description="Nature of Psychopathic Personality Disorder"/>
-    <affiliation_fields field="Science">
-      <affiliations role="Researcher (Research)" employer="University of Cambridge Institute of Criminology, United Kingdom" start="1986-01-01T00:00:00.000+0000" end="1986-01-01T00:00:00.000+0000"/>
+    <degrees
+        institution="The University of Newcastle, Austrália"
+        degree_name="Master of Science Degree (Master), Specialization in Clinical Psychology "
+        start="1974-01-01T00:00:00.000+0100"
+        end="1976-01-01T00:00:00.000+0100"/>
+    <degrees
+        institution="University of St Andrews, Reino Unido"
+        degree_name="Honours Bachelor of Science Degree (Bachelor)"
+        start="1971-01-01T00:00:00.000+0100"
+        end="1974-01-01T00:00:00.000+0100"/>
+    <projects
+        name="The Comprehensive Assessment of Psychopathic Personality Disorder (CAPP)"
+        description="The development of a new measure of psychopathy and an assessment of its cross-cultural generalisability in Scotland."/>
+    <projects
+        name="The Diagnostic Significance of Antisocial Behaviour"
+        description="Nature of Psychopathic Personality Disorder."/>
+    <affiliation_fields
+        field="Science">
+      <affiliations
+          role="Researcher (Research)"
+          employer="University of Cambridge Institute of Criminology, United Kingdom"
+          start="1986-01-01T00:00:00.000+0000"
+          end="1986-01-01T00:00:00.000+0000"/>
     </affiliation_fields>
-    <affiliation_fields field="Teaching in Higher Education">
-      <affiliations role="Assistant Professor (University Teacher)" employer="La Trobe University School of Law, Australia" start="2015-01-01T00:00:00.000+0000"/>
-      <affiliations role="Assistant Professor (University Teacher)" employer="University of Bergen - Department of Psychology, Norway" start="2006-01-01T00:00:00.000+0000"/>
-      <affiliations role="Full Professor (University Teacher)" employer="Glasgow Caledonian University, United Kingdom" start="1992-01-01T00:00:00.000+0000" end="2016-01-01T00:00:00.000+0000"/>
-      <affiliations role="Visiting Professor (University Teacher)" employer="University of Glasgow Mental Health and Wellbeing, United Kingdom" start="1997-01-01T00:00:00.000+0000" end="2001-01-01T00:00:00.000+0000"/>
+    <affiliation_fields
+        field="Teaching in Higher Education">
+      <affiliations
+          role="Assistant Professor (University Teacher)"
+          employer="La Trobe University School of Law, Australia"
+          start="2015-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Assistant Professor (University Teacher)"
+          employer="University of Bergen - Department of Psychology, Norway"
+          start="2006-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Full Professor (University Teacher)"
+          employer="Glasgow Caledonian University, United Kingdom"
+          start="1992-01-01T00:00:00.000+0000"
+          end="2016-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Visiting Professor (University Teacher)"
+          employer="University of Glasgow Mental Health and Wellbeing, United Kingdom"
+          start="1997-01-01T00:00:00.000+0000"
+          end="2001-01-01T00:00:00.000+0000"/>
     </affiliation_fields>
-    <affiliation_fields field="Positions / Appointments">
-      <affiliations role="Grade B Clinical Psychologist with maximum discretionary points for personal excellence" employer="Douglas Inch Centre, United Kingdom" start="1990-01-01T00:00:00.000+0000" end="2007-01-01T00:00:00.000+0000"/>
-      <affiliations role="Top Grade Clinical Psychologist (with greater responsibility)" employer="Douglas Inch Centre, United Kingdom" start="1989-01-01T00:00:00.000+0000" end="1990-01-01T00:00:00.000+0000"/>
-      <affiliations role="Top Grade Clinical Psychologist" employer="Douglas Inch Centre, United Kingdom" start="1984-01-01T00:00:00.000+0000" end="1989-01-01T00:00:00.000+0000"/>
-      <affiliations role="Chartered Psychologist" employer="The British Psychological Society, United Kingdom" start="1988-01-01T00:00:00.000+0000" end="1988-01-01T00:00:00.000+0000" description="Worked as a Chartered Psychologist during a few months in 1988 in &quot;The British Psychological Socirety&quot;, UK."/>
-      <affiliations role="Senior Clinical Psychologist" employer="Gartnavel Royal Hospital, United Kingdom" start="1978-01-01T00:00:00.000+0000" end="1983-01-01T00:00:00.000+0000"/>
-      <affiliations role="Basic Grade Clinical Psychologist (Post Probationer)" employer="Gartnavel Royal Hospital, United Kingdom" start="1976-01-01T00:00:00.000+0100" end="1978-01-01T00:00:00.000+0000"/>
-      <affiliations role="Basic Grade Clinical Psychologist (Probationer)" employer="Northumberland Area Health Authority, United Kingdom" start="1974-01-01T00:00:00.000+0100" end="1976-01-01T00:00:00.000+0100"/>
+    <affiliation_fields
+        field="Positions / Appointments">
+      <affiliations
+          role="Grade B Clinical Psychologist with maximum discretionary points for personal excellence"
+          employer="Douglas Inch Centre, United Kingdom"
+          start="1990-01-01T00:00:00.000+0000"
+          end="2007-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Top Grade Clinical Psychologist (with greater responsibility)"
+          employer="Douglas Inch Centre, United Kingdom"
+          start="1989-01-01T00:00:00.000+0000"
+          end="1990-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Top Grade Clinical Psychologist"
+          employer="Douglas Inch Centre, United Kingdom"
+          start="1984-01-01T00:00:00.000+0000"
+          end="1989-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Chartered Psychologist"
+          employer="The British Psychological Society, United Kingdom"
+          start="1988-01-01T00:00:00.000+0000"
+          end="1988-01-01T00:00:00.000+0000"
+          description="Worked as a Chartered Psychologist during a few months in 1988 in &quot;The British Psychological Socirety&quot;, UK."/>
+      <affiliations
+          role="Senior Clinical Psychologist"
+          employer="Gartnavel Royal Hospital, United Kingdom"
+          start="1978-01-01T00:00:00.000+0000"
+          end="1983-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Basic Grade Clinical Psychologist (Post Probationer)"
+          employer="Gartnavel Royal Hospital, United Kingdom"
+          start="1976-01-01T00:00:00.000+0100"
+          end="1978-01-01T00:00:00.000+0000"/>
+      <affiliations
+          role="Basic Grade Clinical Psychologist (Probationer)"
+          employer="Northumberland Area Health Authority, United Kingdom"
+          start="1974-01-01T00:00:00.000+0100"
+          end="1976-01-01T00:00:00.000+0100"/>
     </affiliation_fields>
-    <distinction_types type="Award">
-      <distinctions name="Lifetime Achievement Award European Association of Psychology and Law" date="2018-01-01T00:00:00.000+0000"/>
-      <distinctions name="The Medal of David the Invincible of The Armenian Philosophical Academy" date="2012-01-01T00:00:00.000+0000"/>
-      <distinctions name="Senior Award for Outstanding Lifetime Contribution to Forensic Psychology from the Division of Forensic Psychology" date="2006-01-01T00:00:00.000+0000"/>
+    <distinction_types
+        type="Award">
+      <distinctions
+          name="Lifetime Achievement Award European Association of Psychology and Law"
+          date="2018-01-01T00:00:00.000+0000"/>
+      <distinctions
+          name="The Medal of David the Invincible of The Armenian Philosophical Academy"
+          date="2012-01-01T00:00:00.000+0000"/>
+      <distinctions
+          name="&#x9;Senior Award for Outstanding Lifetime Contribution to Forensic Psychology from the Division of Forensic Psychology"
+          date="2006-01-01T00:00:00.000+0000"/>
     </distinction_types>
-    <distinction_types type="Other Distinction">
-      <distinctions name="Honorary Doctorate (Armenian State Pedagogical University After Khachatur Abovian, Armenia)" date="2012-01-01T00:00:00.000+0000"/>
-      <distinctions name="Fellow of the Royal Society of Edinburgh (Royal Society of Edinburgh, United Kingdom)" date="2004-01-01T00:00:00.000+0000"/>
-      <distinctions name="Fellow of British Psychological Society (The British Psychological Society, United Kingdom)" date="1986-01-01T00:00:00.000+0000"/>
+    <distinction_types
+        type="Other Distinction">
+      <distinctions
+          name="Honorary Doctorate (Armenian State Pedagogical University After Khachatur Abovian, Armenia)"
+          date="2012-01-01T00:00:00.000+0000"/>
+      <distinctions
+          name="Fellow of the Royal Society of Edinburgh (Royal Society of Edinburgh, United Kingdom)"
+          date="2004-01-01T00:00:00.000+0000"/>
+      <distinctions
+          name="Fellow of British Psychological Society (The British Psychological Society, United Kingdom)"
+          date="1986-01-01T00:00:00.000+0000"/>
     </distinction_types>
-    <technologies name="Java" proficiency="5"/>
-    <technologies name="Python" proficiency="5"/>
-    <technologies name="C++" proficiency="4"/>
-    <technologies name="Javascript" proficiency="4"/>
-    <technologies name="C" proficiency="3"/>
-    <technologies name="Rust" proficiency="2"/>
-    <activity_types type="Jury of Academic Degree">
-      <activities role="(Thesis) Arguer" description="Revealing specialisation events induced by pollutants in below ground fungal communities in 2020"/>
-      <activities role="(Thesis) Main arguer" description="Taxonomy and biodiversity of plant pathogenic fungi from Australia"/>
+    <technologies
+        name="Java"
+        proficiency="5"/>
+    <technologies
+        name="Python"
+        proficiency="5"/>
+    <technologies
+        name="C++"
+        proficiency="4"/>
+    <technologies
+        name="Javascript"
+        proficiency="4"/>
+    <technologies
+        name="C"
+        proficiency="3"/>
+    <technologies
+        name="Rust"
+        proficiency="2"/>
+    <activity_types
+        type="Jury of Academic Degree">
+      <activities
+          name="(Thesis) Arguer"
+          description="Revealing specialisation events induced by pollutants in below ground fungal communities in 2020"/>
+      <activities
+          name="(Thesis) Main arguer"
+          description="Taxonomy and biodiversity of plant pathogenic fungi from Australia"/>
     </activity_types>
-    <activity_types type="Committee Member">
-      <activities role="Advisor / Consultant" description="Scientific Consultant"/>
-      <activities role="President / Vice-president" description="President of the Mediterranean Phytopathology Union"/>
+    <activity_types
+        type="Committee Member">
+      <activities
+          name="Advisor / Consultant"
+          description="Scientific Consultant"/>
+      <activities
+          name="President / Vice-president"
+          description="President of the Mediterranean Phytopathology Union"/>
+    </activity_types>
+    <activity_types
+        type="Interests">
+      <activities
+          name="Soccer"/>
+      <activities
+          name="Video Games"/>
     </activity_types>
   </Person>
 </curriculum_vitae:CurriculumVitae>

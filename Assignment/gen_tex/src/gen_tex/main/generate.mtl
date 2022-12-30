@@ -7,6 +7,7 @@
 \documentclass ['['/]a4paper,10pt]{article}
 
 %A Few Useful Packages
+\usepackage{hyperref}
 \usepackage{tabularx}
 \usepackage{marvosym}
 \usepackage{fontspec} 					%for loading fonts
@@ -117,14 +118,15 @@ ItalicFont = Fontin-Italic.otf
 \begin{tabular}{rl}
     \textsc{Full Name:} & [aCurriculumVitae.Person.full_name/] \\
     \textsc{Date of birth:} & [parseDate(aCurriculumVitae.Person.date_of_birth.toString().tokenize())/] \\
-    \textsc{Adrress:}   & [aCurriculumVitae.Person.home_address/]\\
+    \textsc{Address:}   & [aCurriculumVitae.Person.home_address/]\\
     \textsc{Citation Names:}   [genCitNames(aCurriculumVitae.Person.citation_names)/]\\
     \textsc{Mobile:}     & [aCurriculumVitae.Person.phone_number/]\\
+	\textsc{Sites:}     [genSites(aCurriculumVitae.Person.websites)/]\\
 \end{tabular}
 
 [if (aCurriculumVitae.Person.description <> null)]
 \section{Summary}
-[aCurriculumVitae.Person.description/][/if]
+[aCurriculumVitae.Person.description/]\\[/if]
 
 [if (aCurriculumVitae.Person.degrees->size() > 0)]
 %Section: Education
@@ -138,10 +140,8 @@ ItalicFont = Fontin-Italic.otf
 \section{Work Experience}
 [genAffiliations(aCurriculumVitae.Person.affiliation_fields)/][/if]
 
-
 [if (aCurriculumVitae.Person.idioms->size() > 0)]
 \section{Languages}
-\centering
 \begin{tabularx}{\textwidth}{c @{\extracolsep{\fill}} ccccc}
 \\
   & \textbf{Speaking} & \textbf{Reading} & \textbf{Writing} & \textbf{Listening} \\
@@ -155,9 +155,21 @@ ItalicFont = Fontin-Italic.otf
         \grade{2} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 2))/]\\
         \grade{3} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 3))/]\\
         \grade{4} & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 4))/] \\
-        \grade{5}  & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 5))/]\\
+        \grade{5}  & [genEqProfTechs(aCurriculumVitae.Person.technologies->select(tech: Technology | tech.proficiency = 5))/]\\\\
 \end{tabular}
 [/if]
+
+[if(aCurriculumVitae.Person.distinction_types->size() > 0)]
+\section{Distinctions}
+[genDistinctions(aCurriculumVitae.Person.distinction_types)/][/if]
+
+[if (aCurriculumVitae.Person.projects->size() + aCurriculumVitae.Person.degrees.projects->size()->sum() > 0)] 
+\section{Projects}
+[genProjects(aCurriculumVitae.Person.degrees.projects->asOrderedSet(), aCurriculumVitae.Person.projects)/][/if]
+
+[if (aCurriculumVitae.Person.activity_types->size() > 0)] 
+\section{Activities}
+[genActivities(aCurriculumVitae.Person.activity_types)/][/if]
 [else]
 \par{\centering
 		{\Huge   \textsc{firstName lastName}
@@ -236,7 +248,7 @@ ItalicFont = Fontin-Italic.otf
 
 \begin{tabular}{r|p{11cm}} 
 [for (affil : Affiliation | affil_field.affiliations)]
-\textsc{[affil.start.toString().tokenize()->last()/]-[if (affil.end->size()= 0)]Current[else][affil.end.toString().tokenize()->last()/][/if]} 
+\textsc{[affil.start.toString().tokenize()->last()/][if (affil.end->size()= 0)] - Current[else]-[affil.end.toString().tokenize()->last()/][/if]} 
 & \textsc{[affil.employer/]} \\ \textsc{} & \emph{[affil.role/]} [if (affil.description <> null)]
   \\ & \footnotesize{[affil.description/]}[/if] \\ \multicolumn{2}{c}{} \\
 [/for]
@@ -244,5 +256,64 @@ ItalicFont = Fontin-Italic.otf
 
 [/if]
 [/for]
+[/template]
+
+[template public genDistinctions(dist_types : OrderedSet(DistinctionType))]
+[for (dist_type : DistinctionType | dist_types)]
+[if (dist_type.distinctions->size() > 0)]
+\begin{tabular}{r}
+[if (dist_type = dist_types->first())]\\[/if]\large
+\textbf{[dist_type.type/]}
+\normalsize
+\end{tabular}
+
+\begin{tabular}{r p{11cm}}	
+\\
+[for (distinction : Distinction | dist_type.distinctions)]
+\textsc{[distinction.date.toString().tokenize()->last()/]} & [distinction.name/]\\ \\
+[/for]
+\end{tabular}
+
+[/if]
+[/for]
+[/template]
+
+[template public genProjects(degree_projects: OrderedSet(Project), other_projects : OrderedSet(Project))]
+\begin{tabular}{p{11cm}}
+\\
+[for (degree_project: Project | degree_projects)]
+\large \textbf{\emph{[degree_project.name/] *}}\normalsize\\\\
+\emph{[degree_project.description/]}\\
+\footnotesize{* Project developed for degree: [degree_project.eContainer(Degree).degree_name + ', ' + degree_project.eContainer(Degree).institution/]}\\\\
+[/for]
+
+[for (other_project: Project | other_projects)]
+\large \textbf{\emph{[other_project.name/]}}\normalsize\\\\
+[other_project.description/]\\\\
+[/for]
+\end{tabular}
+[/template]
+
+[template public genActivities(activity_types: OrderedSet(ActivityType))]
+[for (activity_type: ActivityType | activity_types)]
+[if (activity_type.activities->size() > 0)]
+\begin{tabular}{r}
+[if (activity_type = activity_types->first())]\\[/if]\large
+\textbf{[activity_type.type/]}
+\normalsize
+\end{tabular}
+
+\begin{tabular}{r p{11cm}}	
+[for (activity: Activity| activity_type.activities)]
+\textsc{[activity.name/]} & [activity.description/]\\ \\
+[/for]
+\end{tabular}
+[/if]
+[/for]
+[/template]
+
+[template public genSites(websites : OrderedSet(Website))]
+[for (site : Website | websites)]
+['& \\url{' + site.url + '}'/][if (site <> websites->last())] \\ [/if][/for]
 [/template]
 
