@@ -116,12 +116,18 @@ ItalicFont = Fontin-Italic.otf
 \section{Personal Information}
 
 \begin{tabular}{rl}
-    \textsc{Full Name:} & [aCurriculumVitae.Person.full_name/] \\
-    \textsc{Date of birth:} & [parseDate(aCurriculumVitae.Person.date_of_birth.toString().tokenize())/] \\
-    \textsc{Address:}   & [aCurriculumVitae.Person.home_address/]\\
-    \textsc{Citation Names:}   [genCitNames(aCurriculumVitae.Person.citation_names)/]\\
-    \textsc{Mobile:}     & [aCurriculumVitae.Person.phone_number/]\\
-	\textsc{Sites:}     [genSites(aCurriculumVitae.Person.websites)/]\\
+	[if (aCurriculumVitae.Person.full_name <> null)]
+    \textsc{Full Name:} & [aCurriculumVitae.Person.full_name/] \\[/if]
+	[if (aCurriculumVitae.Person.date_of_birth <> null)]
+    \textsc{Date of birth:} & [parseDate(aCurriculumVitae.Person.date_of_birth.toString().tokenize())/] \\[/if]
+	[if (aCurriculumVitae.Person.home_address <> null)]
+	\textsc{Address:}   & [aCurriculumVitae.Person.home_address/]\\[/if]
+	[if (aCurriculumVitae.Person.citation_names->size() > 0)]
+    \textsc{Citation Names:}   [genCitNames(aCurriculumVitae.Person.citation_names)/]\\[/if]
+    [if (aCurriculumVitae.Person.phone_number <> 0 and aCurriculumVitae.Person.phone_number <> null)]
+	\textsc{Mobile:}     & [aCurriculumVitae.Person.phone_number/]\\[/if]
+	[if (aCurriculumVitae.Person.websites->size() > 0)]
+	\textsc{Sites:}     [genSites(aCurriculumVitae.Person.websites)/]\\	[/if]
 \end{tabular}
 
 [if (aCurriculumVitae.Person.description <> null)]
