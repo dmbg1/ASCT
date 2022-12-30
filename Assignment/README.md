@@ -10,6 +10,6 @@ This table can be found in the following link: [Modeling concept table](/Assignm
 For the modelling language design we used the emf framework with auxiliary OCL constraints that, in our case were mainly used to guarantee that scales didn't deviate from its possible values. 
 For example language qualifications can only have the following values as inputs: A1, A2, B1, B2, C1 and C2.
 
-The resulting metamodel diagram was the following ([Metamodel diagram link](/Assignment/docs/Metamodel.pdf)):
+The resulting metamodel diagram was the following ([Metamodel diagram link](/Assignment/docs/Metamodel.jpg)):
 
 ![Metamodel diagram](/Assignment/docs/Metamodel.jpg)
