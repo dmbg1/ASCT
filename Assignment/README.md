@@ -62,3 +62,9 @@ The image [Graphical to metamodel](/Assignment/docs/cgsMapping.png) indicates wi
 ### Generated CV document example 
 
 [Example CV](/Assignment/docs/Gen_CV_Example.pdf)
+
+### Group
+
+Carlos Soeiro - up201706405
+
+Diogo Gomes - up201806572
